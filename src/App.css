@@ -1,0 +1,32 @@
+.cajita {
+  border: 1px solid #ccc;
+  padding: 1rem;
+  /* border-radius: 8px; */
+  width: 100%;
+  background-color: #f9f9f9;
+}
+
+details > div  {
+  border: 1px solid #ccc;
+  margin-top: 1rem;
+  padding: 1rem;
+  /* border-radius: 8px; */
+  width: 100%;
+  background-color: white;
+}
+
+/* ------------------------------------------ */
+
+.tarjetaAsistente{
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 1rem;
+  margin: .8rem;
+  display: flex;
+  flex: 1 1 calc(30% - 20px); 
+  flex-direction: column;
+  justify-content: space-between;
+  /* flex-wrap: wrap; */
+}
+
+/* ------------------------------------------ */
