@@ -21,9 +21,9 @@ export default function ContadorProductos({id, stock}) {
         setCantidadProducto(prev => Math.max(prev - 1, 0));
     }
 
-    useEffect(() => {
-        console.log("Cantidad:", cantidadProducto, "ID:", id, /*"Producto:", nombre*/);
-    }, [cantidadProducto]);
+    // useEffect(() => {
+    //     console.log("Cantidad:", cantidadProducto, "ID:", id, /*"Producto:", nombre*/);
+    // }, [cantidadProducto]);
 
     return (
         <div className={ContadorStyle.divBotoncitosMasMenos}>

@@ -15,7 +15,8 @@ export default function CatalogoProductos() {
             categoria: "Cocina",
             descripcion: "Hecha a mano con acabado en esmalte moteado.",
             precio: 4500,
-            stock: 20
+            stock: 20,
+            esFavorito: true
         },
         {
             id: 2,
@@ -23,7 +24,8 @@ export default function CatalogoProductos() {
             categoria: "Cocina",
             descripcion: "Ideal para cereales o ensaladas, apto para microondas.",
             precio: 6200,
-            stock: 3
+            stock: 3,
+            esFavorito: false
         },
         {
             id: 3,
@@ -31,7 +33,8 @@ export default function CatalogoProductos() {
             categoria: "Decoración",
             descripcion: "Pieza decorativa con textura rústica y minimalista.",
             precio: 8900,
-            stock: 5
+            stock: 5,
+            esFavorito: false
         }
     ];
 
