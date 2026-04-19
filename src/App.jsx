@@ -4,13 +4,15 @@ import './App.css'
 import Bienvenida from './assets/Components/Bienvenida.jsx'
 import Asistentes from './assets/Components/Asistentes.jsx'
 
+import LayoutEcommerce from './assets/Ecommerce/Layout.jsx'
+
 function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <main>
+    <>
 
-      <h1>Ejercicios prácticos</h1>
+      {/* <h1>Ejercicios prácticos</h1>
       
       <section style={{display:'flex', flexDirection: 'column', gap: '1rem'}}>
         <div>
@@ -35,7 +37,7 @@ function App() {
 
       <footer>
         holi
-      </footer>
+      </footer> */}
 
       {/* <button
           className="counter"
@@ -44,7 +46,8 @@ function App() {
           Count is {count}
         </button> */}
 
-    </main>
+      <LayoutEcommerce/>
+    </>
   )
 }
 
