@@ -2,18 +2,19 @@
 
 :root{
     /* Opcion 1: */
-    --text: #050b0c;
+    /* --text: #050b0c;
     --background: #f1f8fa;
     --primary: #219ebc;
     --secondary: #8fcede;
-    --accent: #ffb703;
+    --accent: #ffb703; */
 
     /* Opcion 2: */
-    /* --text: #002529;
+    --text: #002529;
     --background: #f4f9fa;
-    --primary: #deff4d;
+    --background2: #bfc3c4;
+    --primary: #ff2ecb;
     --secondary: #ff6461;
-    --accent: #ff2ecb; */
+    --accent: #deff4d;
 }
 
 html {
@@ -43,14 +44,14 @@ a {
 
 a:hover {
     /* font-weight: bold; */
-    background-color: var(--primary);
-    color: var(--background);
+    background-color: var(--accent);
+    /* color: var(--background); */
 }
 
 ul,
 ol {
     list-style: none;
-marker: none ;
+    marker: none ;
 }
 
 *{

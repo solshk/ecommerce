@@ -18,7 +18,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
-    border-bottom: solid 1px var(--secondary);
+    border-bottom: solid 1px var(--background2);
 }
 
 .main {
