@@ -1,36 +1,44 @@
 import React from 'react'
+
 import TarjetaProducto from '../Tarjetas/TarjetaProducto'
 
+import TarjetaProductoStyle from '../Tarjetas/TarjetaProducto.module.css'
+
 export default function CatalogoProductos() {
+
+    // CatalogoProductos() trae los productos y los muestra en un contenedor de cards
 
     const productos = [
         {
             id: 1,
             nombre: "Taza Artesanal",
-            categoria: "Vajilla",
+            categoria: "Cocina",
             descripcion: "Hecha a mano con acabado en esmalte moteado.",
-            precio: 4500
+            precio: 4500,
+            stock: 20
         },
         {
             id: 2,
             nombre: "Bowl de Cocina",
-            categoria: "Vajilla",
+            categoria: "Cocina",
             descripcion: "Ideal para cereales o ensaladas, apto para microondas.",
-            precio: 6200
+            precio: 6200,
+            stock: 3
         },
         {
             id: 3,
             nombre: "Florero Orgánico",
             categoria: "Decoración",
             descripcion: "Pieza decorativa con textura rústica y minimalista.",
-            precio: 8900
+            precio: 8900,
+            stock: 5
         }
     ];
 
     // console.log (productos)
 
     return (
-        <div>
+        <div className={TarjetaProductoStyle.contenedorCards}>
             {productos.map((producto, id) => (
                 <TarjetaProducto key={producto.id} {...producto} />
             ))}

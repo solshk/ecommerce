@@ -5,8 +5,9 @@
     /* border-style: dashed; */
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     gap: .8rem;
-     max-width: 400px; /*hace que cuando el texto de la card es muy largo, no se estire indefinidamente */
+    max-width: 300px; /*hace que cuando el texto de la card es muy largo, no se estire indefinidamente */
 }
 
 .contenedorCards{
@@ -14,6 +15,8 @@
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 1rem;
 }
 
 .imgProducto{
@@ -21,4 +24,6 @@
     width: 300px;
     object-fit: cover;  
     align-self: center; /*hace que cuando el texto de la card es muy largo, la img quede en el medio de la card */
+    border-radius: 5px;
 }
+

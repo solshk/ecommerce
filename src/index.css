@@ -1,11 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 :root{
+    /* Opcion 1: */
     --text: #050b0c;
     --background: #f1f8fa;
     --primary: #219ebc;
     --secondary: #8fcede;
     --accent: #ffb703;
+
+    /* Opcion 2: */
+    /* --text: #002529;
+    --background: #f4f9fa;
+    --primary: #deff4d;
+    --secondary: #ff6461;
+    --accent: #ff2ecb; */
 }
 
 html {
@@ -30,6 +38,13 @@ a {
     font-family: inherit;
     text-decoration: none;
     color: inherit;
+    padding: 1rem;
+}
+
+a:hover {
+    /* font-weight: bold; */
+    background-color: var(--primary);
+    color: var(--background);
 }
 
 ul,

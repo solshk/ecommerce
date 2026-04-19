@@ -1,0 +1,18 @@
+.boton{
+    padding: 1rem;
+    font-size: 1rem;
+    background-color: var(--primary);
+    color: var(--background);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer; /* Changes mouse to hand icon */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.boton:hover{
+    /* font-weight: bold; */ 
+    color: var(--text);
+    background-color: var(--accent);
+    transform: scale(1.02);
+    transition: transform 0.2s, background-color 0.2s; /* Smooth movement */
+}
