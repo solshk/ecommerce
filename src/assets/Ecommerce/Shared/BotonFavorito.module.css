@@ -1,0 +1,20 @@
+.estrella {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.icono {
+  width: 24px;
+  height: 24px;
+  stroke: gold;
+  stroke-width: 2;
+  fill: none;
+  transition: fill 0.2s ease;
+}
+
+/* estado activo */
+.activa .icono {
+  fill: gold;
+}
+

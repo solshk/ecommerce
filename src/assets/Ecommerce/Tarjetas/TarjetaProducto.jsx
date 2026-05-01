@@ -2,9 +2,9 @@ import React from 'react'
 import { useState } from 'react'
 import { useEffect } from 'react'
 
-import ContadorProductos from '../Compartidos/ContadorProductos.jsx'
-import BotonGrande from '../Compartidos/BotonGrande.jsx'
-import BotonFavorito from '../Compartidos/BotonFavorito.jsx'
+import ContadorProductos from '../Shared/ContadorProductos.jsx'
+import BotonGrande from '../Shared/BotonGrande.jsx'
+import BotonFavorito from '../Shared/BotonFavorito.jsx'
 
 import TarjetaProductoStyle from './TarjetaProducto.module.css'
 
