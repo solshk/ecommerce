@@ -21,7 +21,7 @@ export default function TarjetaProducto({ id, nombre, categoria, descripcion, pr
     return (
         <div className={TarjetaProductoStyle.card}>
 
-            <img src="prod1.jpg" alt="Imagen" className={TarjetaProductoStyle.imgProducto} />
+            <img src="img/prod1.jpg" alt="Imagen" className={TarjetaProductoStyle.imgProducto} />
 
             <div className={TarjetaProductoStyle.tituloYFav}>
                 <h5>{nombre}</h5>
