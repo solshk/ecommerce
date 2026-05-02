@@ -27,9 +27,9 @@ export default function ContadorProductos({id, stock}) {
 
     return (
         <div className={ContadorStyle.divBotoncitosMasMenos}>
-            <BotonContador texto={"+"} onClick={handleAgregarProducto} />
-            <p>{cantidadProducto}</p>
             <BotonContador texto={"-"} onClick={handleQuitarProducto} />
+            <p>{cantidadProducto}</p>
+            <BotonContador texto={"+"} onClick={handleAgregarProducto} />
         </div>
     )
 }
