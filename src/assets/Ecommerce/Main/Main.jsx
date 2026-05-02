@@ -1,8 +1,8 @@
 import React from 'react'
-import Productos from '../Catalogos/ProductosContainer.jsx'
+import Productos from '../Productos/ProductosContainer.jsx'
 import FormularioContainer from '../Formularios/FormularioContainer.jsx'
 import MainStyle from './Main.module.css'
-import ProductosContainer from '../Catalogos/ProductosContainer.jsx'
+import ProductosContainer from '../Productos/ProductosContainer.jsx'
 
 export default function Main() {
 

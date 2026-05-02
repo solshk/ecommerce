@@ -6,7 +6,7 @@ export default function Productos({data}) {
     return (
         <div className={ProductosStyle.contenedorCards}>
             {data.map((producto, id) => (
-                <TarjetaProducto key={data.id} {...producto} />
+                <TarjetaProducto key={producto.id} {...producto} />
             ))}
         </div>
     )
