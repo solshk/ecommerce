@@ -10,16 +10,7 @@
     max-width: 300px; /*hace que cuando el texto de la card es muy largo, no se estire indefinidamente */
 }
 
-.contenedorCards{
-    padding: 3rem 2rem;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    gap: 1.5rem;
-}
-
-.imgProducto{
+.img{
     height: 300px;
     width: 300px;
     object-fit: cover;  
@@ -27,7 +18,7 @@
     border-radius: 5px;
 }
 
-.tituloYFav{
+.tituloCard{
     display: flex;
     justify-content: space-between;
 }

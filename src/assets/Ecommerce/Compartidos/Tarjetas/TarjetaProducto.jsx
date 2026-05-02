@@ -1,11 +1,8 @@
 import React from 'react'
-import { useState } from 'react'
-import { useEffect } from 'react'
-
-import ContadorProductos from '../Shared/ContadorProductos.jsx'
-import BotonGrande from '../Shared/BotonGrande.jsx'
-import BotonFavorito from '../Shared/BotonFavorito.jsx'
-
+import { useState, useEffect } from 'react'
+import ContadorProductos from '../Contador/ContadorProductos.jsx'
+import BotonGrande from '../Botones/BotonGrande.jsx'
+import BotonFavorito from '../Botones/BotonFavorito.jsx'
 import TarjetaProductoStyle from './TarjetaProducto.module.css'
 
 export default function TarjetaProducto({ id, nombre, categoria, descripcion, precio, stock, esFavorito, img }) {
@@ -17,13 +14,12 @@ export default function TarjetaProducto({ id, nombre, categoria, descripcion, pr
         alert(`Agregaste ${nombre} al carrito!`);
     }
 
-
     return (
         <div className={TarjetaProductoStyle.card}>
 
-            <img src={img} alt="Imagen" className={TarjetaProductoStyle.imgProducto} />
+            <img src={img} alt="Imagen" className={TarjetaProductoStyle.img} />
 
-            <div className={TarjetaProductoStyle.tituloYFav}>
+            <div className={TarjetaProductoStyle.tituloCard}>
                 <h5>{nombre}</h5>
                 <BotonFavorito esFavorito={esFavorito} />
             </div>

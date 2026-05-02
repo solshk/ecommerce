@@ -1,0 +1,9 @@
+.footer {
+    grid-area: footer;
+    background-color: var(--secondary);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem;
+}

@@ -1,10 +1,9 @@
 import React from 'react'
 import { useState, useEffect } from 'react';
+import Nosotros from './Nosotros.jsx'
 
-import TarjetaEquipo from '../Tarjetas/TarjetaEquipo.jsx'
-import TarjetaEquipoStyle from '../Tarjetas/TarjetaEquipo.module.css'
-
-export default function Nosotros() {
+export default function NosotrosContainer() {
+    // este debería ser el contenedor lógico
 
     const [nosotros, setNosotros] = useState([]);
     const [cargando, setCargando] = useState(true);
@@ -36,14 +35,6 @@ export default function Nosotros() {
     if (error) { return <p>Error: {error}</p>; }
 
     return (
-        <div>
-            <h4 className={TarjetaEquipoStyle.tituloNosotros}>Nuestro equipo</h4>
-            <div className={TarjetaEquipoStyle.contenedorCards}>
-                {nosotros.map((empleado, id) => (
-                    <TarjetaEquipo key={empleado.id} {...empleado} />
-                ))}
-            </div>
-
-        </div>
+        <Nosotros data={nosotros}/>
     )
 }

@@ -1,0 +1,12 @@
+.grid {
+    display: grid;
+    min-height: 100vh;
+    min-width: 100%;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto 2fr auto;
+    gap: 0px 0px;
+    grid-template-areas:
+        'header header header'
+        'main main main'
+        'footer footer footer';
+}

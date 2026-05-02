@@ -1,8 +1,6 @@
 import React from 'react'
-import { useState } from 'react'
-import { useEffect } from 'react';
-
-import BotonContador from './BotonContador.jsx'
+import { useState, useEffect } from 'react'
+import BotonContador from '../Botones/BotonContador.jsx'
 import ContadorStyle from './ContadorProductos.module.css'
 
 export default function ContadorProductos({id, stock}) {

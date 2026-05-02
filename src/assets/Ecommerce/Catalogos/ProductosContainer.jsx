@@ -1,12 +1,10 @@
 import React from 'react'
 import { useState, useEffect } from 'react';
+import Productos from './Productos.jsx'
 
-import TarjetaProducto from '../Tarjetas/TarjetaProducto'
-import TarjetaProductoStyle from '../Tarjetas/TarjetaProducto.module.css'
 
-export default function CatalogoProductos() {
-
-    // CatalogoProductos() trae los productos y los muestra en un contenedor de cards
+export default function ProductosContainer() {
+    // este es un componente lógico
 
     const [productos, setProductos] = useState([]);
     const [cargando, setCargando] = useState(true);
@@ -38,10 +36,6 @@ export default function CatalogoProductos() {
     if (error) { return <p>Error: {error}</p>; }
 
     return (
-        <div className={TarjetaProductoStyle.contenedorCards}>
-            {productos.map((producto, id) => (
-                <TarjetaProducto key={producto.id} {...producto} />
-            ))}
-        </div>
+        <Productos data={productos} />
     )
 }
