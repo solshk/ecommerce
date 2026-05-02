@@ -1,0 +1,30 @@
+[
+    {
+        "id": 1,
+        "nombre": "Ecito Jef",
+        "email": "jefecito@ecommerce.com",
+        "puesto": "CEO",
+        "img": "/img/avi1.svg"
+    },
+    {
+        "id": 2,
+        "nombre": "Adito Emple",
+        "email": "empleadito@ecommerce.com",
+        "puesto": "Vendedora",
+        "img": "/img/avi6.svg"
+    },
+    {
+        "id": 3,
+        "nombre": "Ting Marke",
+        "email": "marketing@ecommerce.com",
+        "puesto": "Jefe de Marketing",
+        "img": "/img/avi5.svg"
+    },
+    {
+        "id": 4,
+        "nombre": "Tencia Asis",
+        "email": "asistencia@ecommerce.com",
+        "puesto": "Asistencia al cliente",
+        "img": "/img/avi2.svg"
+    }
+]

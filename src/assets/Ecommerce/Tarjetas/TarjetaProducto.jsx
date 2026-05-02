@@ -8,7 +8,7 @@ import BotonFavorito from '../Shared/BotonFavorito.jsx'
 
 import TarjetaProductoStyle from './TarjetaProducto.module.css'
 
-export default function TarjetaProducto({ id, nombre, categoria, descripcion, precio, stock, esFavorito }) {
+export default function TarjetaProducto({ id, nombre, categoria, descripcion, precio, stock, esFavorito, img }) {
 
     // console.log (nombre, categoria, descripcion, precio)
 
@@ -21,7 +21,7 @@ export default function TarjetaProducto({ id, nombre, categoria, descripcion, pr
     return (
         <div className={TarjetaProductoStyle.card}>
 
-            <img src="img/prod1.jpg" alt="Imagen" className={TarjetaProductoStyle.imgProducto} />
+            <img src={img} alt="Imagen" className={TarjetaProductoStyle.imgProducto} />
 
             <div className={TarjetaProductoStyle.tituloYFav}>
                 <h5>{nombre}</h5>

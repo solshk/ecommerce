@@ -2,7 +2,6 @@ import React from 'react'
 import { useState, useEffect } from 'react';
 
 import TarjetaProducto from '../Tarjetas/TarjetaProducto'
-
 import TarjetaProductoStyle from '../Tarjetas/TarjetaProducto.module.css'
 
 export default function CatalogoProductos() {

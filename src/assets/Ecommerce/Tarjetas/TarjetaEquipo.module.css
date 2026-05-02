@@ -1,0 +1,35 @@
+.tituloNosotros{
+    text-align: center;
+}
+
+.contenedorCards {
+    padding: 1rem 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.card {
+    padding: 1rem;
+    border: solid 1px var(--background);
+    border-radius: 10px;
+    /* border-style: dashed; */
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: .8rem;
+    max-width: 150px; /*hace que cuando el texto de la card es muy largo, no se estire indefinidamente */
+    word-break: break-word; /*rompe las palabras*/
+}
+
+.imgProducto {
+    height: 120px;
+    width: 120px;
+    object-fit: cover;
+    align-self: center;
+    /*hace que cuando el texto de la card es muy largo, la img quede en el medio de la card */
+    border-radius: 100px;
+    background-color: var(--background);
+}

@@ -7,7 +7,7 @@
             "precio": 4500,
             "stock": 20,
             "esFavorito": true,
-            "img": "img/prod1.jpg" 
+            "img": "/img/prod1.jpg" 
     },
     {
             "id": 2,
@@ -17,7 +17,7 @@
             "precio": 6200,
             "stock": 3,
             "esFavorito": false,
-            "img": "img/prod1.jpg" 
+            "img": "/img/prod1.jpg" 
     },
     {
             "id": 3,
@@ -27,6 +27,6 @@
             "precio": 8900,
             "stock": 5,
             "esFavorito": false,
-            "img": "img/prod1.jpg" 
+            "img": "/img/prod1.jpg" 
     }
 ]
