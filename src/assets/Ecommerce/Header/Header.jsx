@@ -6,10 +6,10 @@ export default function Header() {
 
   return (
 
-    <header className={HeaderStyle.header}>
-        <p>Mi logo</p>
+    <nav className={HeaderStyle.header}>
+        <a href="#">Mi logo</a>
         <Navbar/>
-    </header>
+    </nav>
 
   )
 }

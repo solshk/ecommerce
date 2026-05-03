@@ -4,15 +4,14 @@ import NavbarStyle from './Navbar.module.css'
 export default function Navbar() {
 
   return (
-
-    <nav>
-        <ul className={NavbarStyle.lista}>
-            <li><a href="">INICIO</a></li>
-            <li><a href="">PRODUCTOS</a></li>
-            <li><a href="">CONTACTO</a></li>
-            <li><a href="">CARRITO</a></li>
-        </ul>
-    </nav>
+    <div>
+      <ul className={NavbarStyle.lista}>
+        <li><a className={NavbarStyle.navLink} href="#">INICIO</a></li>
+        <li><a className={NavbarStyle.navLink} href="#">PRODUCTOS</a></li>
+        <li><a className={NavbarStyle.navLink} href="#">CONTACTO</a></li>
+        <li><a className={NavbarStyle.navLink} href="#">CARRITO</a></li>
+      </ul>
+    </div>
 
   )
 }

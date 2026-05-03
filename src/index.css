@@ -2,16 +2,12 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
-:root{
-    /* Opcion 1: */
-    /* --text: #050b0c;
-    --background: #f1f8fa;
-    --primary: #219ebc;
-    --secondary: #8fcede;
-    --accent: #ffb703; */
+:root {
+    min-height: 100vh;
 
-    /* Opcion 2: */
-    --text: #002529;
+    /* VARIABLES */
+    --text-dark: #00282c;
+    --text-light: #f9f9f94;
     --background: #f4f9fa;
     --background2: #bfc3c4;
     --primary: #ff2ecb;
@@ -23,18 +19,20 @@ html {
     font-family: 'Inter', sans-serif;
     /* font-size: 62.5%; */
     /*=1em=10px*/
+    font-size: 100%;
     box-sizing: border-box;
     min-height: 100vh;
     color: var(--text);
     background-color: var(--background);
 }
 
-body{
+body {
     min-height: 100vh;
 }
 
-#root{
-    min-height: 100vh;
+* {
+    margin: 0;
+    padding: 0;
 }
 
 a {
@@ -44,37 +42,43 @@ a {
     padding: 1rem;
 }
 
-a:hover {
-    /* font-weight: bold; */
-    background-color: var(--accent);
-    /* color: var(--background); */
-}
-
 ul,
 ol {
     list-style: none;
-    marker: none ;
+    marker: none;
 }
 
-*{
-    margin: 0;
-    padding: 0;
+h1{
+    font-weight: 700;
 }
 
-h1, h2, h3, h4, h5 {
-  font-weight: 700;
+h2,
+h3,
+h4,
+h5 {
+    font-weight: 600;
 }
 
-html {font-size: 100%;} /* 16px */
+h1 {
+    font-size: 4.210rem;
+}
 
-h1 {font-size: 4.210rem; /* 67.36px */}
+h2 {
+    font-size: 2.6rem;
+}
 
-h2 {font-size: 3.158rem; /* 50.56px */}
+h3 {
+    font-size: 2.369rem;
+}
 
-h3 {font-size: 2.369rem; /* 37.92px */}
+h4 {
+    font-size: 1.777rem;
+}
 
-h4 {font-size: 1.777rem; /* 28.48px */}
+h5 {
+    font-size: 1.333rem;
+}
 
-h5 {font-size: 1.333rem; /* 21.28px */}
-
-small {font-size: 0.750rem; /* 12px */}
+small {
+    font-size: 0.7rem;
+}

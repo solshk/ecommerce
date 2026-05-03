@@ -4,3 +4,9 @@
     justify-content: space-between;
     gap: 2rem;
 }
+
+.navLink:hover {
+    background-color: var(--accent);
+    transition: background-color 1s;
+}
+
