@@ -1,11 +1,11 @@
 .boton{
     padding: 1rem;
-    font-size: 1rem;
-    background-color: var(--primary);
-    color: var(--text);
+    font-weight: bold;
+    background-color: var(--accent);
+    /* color: var(--text); */
     border: none;
     /* border-radius: 5px; */
-    cursor: pointer;
+    cursor: pointer; 
     /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
 }
 

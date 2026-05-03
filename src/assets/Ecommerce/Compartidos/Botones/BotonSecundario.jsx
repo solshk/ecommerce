@@ -1,7 +1,7 @@
 import React from 'react'
-import BotonStyle from './BotonGrande.module.css'
+import BotonStyle from './BotonSecundario.module.css'
 
-export default function BotonGrande({ texto, onClick }) {
+export default function BotonSecundario({ texto, onClick }) {
 
     // console.log(texto, onClick);
 

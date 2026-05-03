@@ -1,6 +1,6 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
-import BotonContador from '../Botones/BotonContador.jsx'
+import BotonContador from './BotonContador.jsx'
 import ContadorStyle from './ContadorProductos.module.css'
 
 export default function ContadorProductos({id, stock}) {
@@ -24,7 +24,7 @@ export default function ContadorProductos({id, stock}) {
     // }, [cantidadProducto]);
 
     return (
-        <div className={ContadorStyle.divBotoncitosMasMenos}>
+        <div className={ContadorStyle.divBotoncitos}>
             <BotonContador texto={"-"} onClick={handleQuitarProducto} />
             <p>{cantidadProducto}</p>
             <BotonContador texto={"+"} onClick={handleAgregarProducto} />

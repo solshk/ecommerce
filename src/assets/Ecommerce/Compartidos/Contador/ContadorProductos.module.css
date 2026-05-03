@@ -1,16 +1,11 @@
-.divBotoncitosMasMenos{
+.divBotoncitos{
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    gap: 1rem;
+    /* gap: 1rem; */
 }
 
-.divBotoncitosMasMenos p {
+.divBotoncitos p {
     width: 30px; /* ancho fijo */
-    text-align: center;
-}
-
-.divBotoncitosMasMenos button {
-    width: 50px; /* ancho fijo */
     text-align: center;
 }

@@ -1,6 +1,6 @@
 import React from 'react'
 import Productos from '../Productos/ProductosContainer.jsx'
-import FormularioContainer from '../Formularios/FormularioContainer.jsx'
+import FormularioContainer from '../Formularios/FormularioProductoContainer.jsx'
 import MainStyle from './Main.module.css'
 import ProductosContainer from '../Productos/ProductosContainer.jsx'
 

@@ -7,10 +7,14 @@
 
     /* VARIABLES */
     --text-dark: #00282c;
-    --text-light: #f9f9f94;
+    --text-light: #f4f9fa;
+    --background-white: #ffffff;    
     --background: #f4f9fa;
-    --background2: #bfc3c4;
+    --light-grey:#ebebeb;
+    --grey: #bfc3c4;
+    --background2: #bfc3c4; /*ir cambiando background2 por grey*/
     --primary: #ff2ecb;
+    --primary-light: rgb(255, 46, 203, 0.25);
     --secondary: #ff6461;
     --accent: #deff4d;
 }
