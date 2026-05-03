@@ -1,7 +1,8 @@
 .card{
     padding: 1rem;
-    border: solid 1px var(--background2);
-    border-radius: 10px;
+    border: solid 1px var(--grey);
+    background-color: var(--background-white);
+    /* border-radius: 10px; */
     /* border-style: dashed; */
     display: flex;
     flex-direction: column;
@@ -15,7 +16,7 @@
     width: 300px;
     object-fit: cover;  
     align-self: center; /*hace que cuando el texto de la card es muy largo, la img quede en el medio de la card */
-    border-radius: 5px;
+    /* border-radius: 5px; */
 }
 
 .tituloCard{

@@ -8,10 +8,12 @@ export default function TarjetaEquipo({ id, nombre, email, puesto, img }) {
 
             <img src={img} alt="Imagen" className={TarjetaEquipoStyle.img} />
 
-            <div>
+            <div className={TarjetaEquipoStyle.texto}>
                 <h5>{nombre}</h5>
-                <p style={{fontStyle: 'italic'}}>{puesto}</p>
-                <p><small>{email}</small></p>
+                <div>
+                    <p style={{ fontStyle: 'italic' }}>{puesto}</p>
+                    <p><small>{email}</small></p>
+                </div>
             </div>
 
         </div>

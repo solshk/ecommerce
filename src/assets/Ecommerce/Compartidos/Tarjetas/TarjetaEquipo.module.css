@@ -1,7 +1,8 @@
 .card {
     padding: 1rem;
     border: solid 1px var(--background);
-    border-radius: 10px;
+    background-color: var(--light-grey);
+    /* border-radius: 10px; */
     /* border-style: dashed; */
     display: flex;
     flex-direction: column;
@@ -11,6 +12,11 @@
     word-break: break-word; /*rompe las palabras*/
 }
 
+.card:hover{
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out; 
+}
+
 .img {
     height: 120px;
     width: 120px;
@@ -18,5 +24,11 @@
     align-self: center;
     /*hace que cuando el texto de la card es muy largo, la img quede en el medio de la card */
     border-radius: 100px;
-    background-color: var(--background);
+    background-color: var(--grey);
+}
+
+.texto{
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
 }
