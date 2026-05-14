@@ -7,6 +7,10 @@
     gap: 0px 0px;
     grid-template-areas:
         'header header header'
-        'main main main'
+        'outlet outlet outlet'
         'footer footer footer';
+}
+
+.outlet {
+    grid-area: outlet;
 }

@@ -13,7 +13,7 @@ export default function Main() {
       <h1>Aca va el contenido del Ecommerce</h1>
 
       <section>
-        <h2>Catálogo de productos</h2>
+        <h2>Nuestros productos desatacados</h2>
         <ProductosContainer />
       </section>
 
