@@ -16,24 +16,24 @@ export default function TarjetaProducto({ id, nombre, categoria, descripcion, pr
     }
 
     return (
-        <Link to={`/producto/${id}`}>
-            <div className={TarjetaProductoStyle.card}>
 
+        <div className={TarjetaProductoStyle.card}>
+            <Link to={`/producto/${id}`}>
                 <img src={img} alt="Imagen" className={TarjetaProductoStyle.img} />
 
                 <div className={TarjetaProductoStyle.tituloCard}>
                     <h5>{nombre}</h5>
                     <BotonFavorito esFavorito={esFavorito} />
                 </div>
+            </Link>
+            <small>{categoria}</small>
+            <p>{descripcion}</p>
+            <h5>$ {precio}</h5>
 
-                <small>{categoria}</small>
-                <p>{descripcion}</p>
-                <h5>$ {precio}</h5>
+            <ContadorProductos id={id} stock={stock} />
 
-                <ContadorProductos id={id} stock={stock} />
+            <BotonGrande texto={"Agregar al carrito"} onClick={handleAgregarCarrito} />
+        </div >
 
-                <BotonGrande texto={"Agregar al carrito"} onClick={handleAgregarCarrito} />
-            </div>
-        </Link>
     )
 }
