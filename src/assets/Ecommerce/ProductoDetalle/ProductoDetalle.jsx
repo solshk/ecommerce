@@ -1,5 +1,6 @@
 import { useParams } from 'react-router-dom';
 import { useState, useEffect } from 'react';
+import DetalleStyle from './ProductoDetalle.module.css'
 
 export default function ProductoDetalle() {
 
@@ -29,15 +30,24 @@ export default function ProductoDetalle() {
     }
 
     return (
-        <div>
-            <h2>Detalle del Producto</h2>
-            <p>Mostrando información para el producto con ID:
-                <strong>{id}</strong></p>
+        <div className={DetalleStyle.contenedor}>
 
-            <h2>Detalle del Producto: {producto.nombre}</h2>
-            <img src={producto.imagen} alt={producto.nombre} style={{ maxWidth: '400px'}} />
-            <h3>${producto.precio}</h3>
-            <p>{producto.descripcion}</p>
+            <img src={producto.img} alt={producto.nombre} className={DetalleStyle.img} />
+
+            <div className={DetalleStyle.info}>
+                <div>
+                    <h2>{producto.nombre}</h2>
+                    <p style={{ fontStyle: 'italic', paddingBottom: '1rem'}}>{producto.categoria}</p>
+                    <p>{producto.descripcion}</p>
+                </div>
+
+                <div>
+                    <h4 className={DetalleStyle.precio}>${producto.precio}</h4>
+                    <button>carrito</button>
+                </div>
+
+            </div>
+
         </div>
     )
 }
