@@ -1,9 +1,9 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
 import BotonContador from './BotonContador.jsx'
-import ContadorStyle from './ContadorProductos.module.css'
+// import ContadorStyle from './ContadorProductos.module.css'
 
-export default function ContadorProductos({id, stock}) {
+export default function ContadorProductos({ id, stock }) {
 
     const [cantidadProducto, setCantidadProducto] = useState(0);
 
@@ -24,10 +24,13 @@ export default function ContadorProductos({id, stock}) {
     // }, [cantidadProducto]);
 
     return (
-        <div className={ContadorStyle.divBotoncitos}>
-            <BotonContador texto={"-"} onClick={handleQuitarProducto} />
-            <p>{cantidadProducto}</p>
-            <BotonContador texto={"+"} onClick={handleAgregarProducto} />
+        <div className="btn-group" role="group">
+            <div className="input-group mb-3">
+                <button className="btn btn-primary" type="button" onClick={handleQuitarProducto}>-</button>
+                <p style={{ width: '30px', textAlign: 'center'}}>{cantidadProducto}</p>
+                <button className="btn btn-primary" type="button" onClick={handleAgregarProducto}>+</button>
+            </div>
         </div>
+
     )
 }

@@ -43,7 +43,9 @@ export default function ProductoDetalle() {
 
                 <div>
                     <h4 className={DetalleStyle.precio}>${producto.precio}</h4>
-                    <button>carrito</button>
+                    <button className="btn btn-lg btn-secondary" type="button" style={{width: '100%'}}>
+                        Agregar al carrito
+                    </button>
                 </div>
 
             </div>

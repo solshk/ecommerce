@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      bootswatch:
+        specifier: ^5.3.8
+        version: 5.3.8
       react:
         specifier: ^19.2.4
         version: 19.2.4
@@ -361,6 +364,9 @@ packages:
     resolution: {integrity: sha512-qyq26DxfY4awP2gIRXhhLWfwzwI+N5Nxk6iQi8EFizIaWIjqicQTE4sLnZZVdeKPRcVNoJOkkpfzoIYuvCKaIQ==}
     engines: {node: '>=6.0.0'}
     hasBin: true
+
+  bootswatch@5.3.8:
+    resolution: {integrity: sha512-88mnH9tv+x6DV+scBxYFOpM4YSDVhyfEgbhqaEfvkHNctKI9qRcACxIP9nmBZ5mSeLXtsgax1VsRkUs1eWjlAQ==}
 
   brace-expansion@1.1.13:
     resolution: {integrity: sha512-9ZLprWS6EENmhEOpjCYW2c8VkmOvckIJZfkr7rBW6dObmfgJ/L1GpSYW5Hpo9lDz4D1+n0Ckz8rU7FwHDQiG/w==}
@@ -1203,6 +1209,8 @@ snapshots:
   balanced-match@1.0.2: {}
 
   baseline-browser-mapping@2.10.12: {}
+
+  bootswatch@5.3.8: {}
 
   brace-expansion@1.1.13:
     dependencies:

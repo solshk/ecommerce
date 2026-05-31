@@ -1,5 +1,6 @@
 import { Routes, Route } from 'react-router-dom';
 import LayoutEcommerce from './assets/Ecommerce/Layout/Layout.jsx'
+import Inicio from './assets/Ecommerce/Inicio/Inicio.jsx'
 import ProductosContainer from './assets/Ecommerce/Productos/ProductosContainer.jsx'
 import ProductoDetalle from './assets/Ecommerce/ProductoDetalle/ProductoDetalle.jsx'
 import FormularioProductoContainer from './assets/Ecommerce/Formularios/FormularioProductoContainer.jsx'
@@ -12,7 +13,7 @@ function App() {
   return (
     <Routes>
       <Route element={<LayoutEcommerce />}>
-        <Route path="/" element={<h1>Página de Inicio</h1>} />
+        <Route path="/" element={<Inicio/>} />
         <Route path="/destacados" element={<ProductosContainer/>} />
         <Route path="/productos" element={<ProductosContainer/>} />
         <Route path="/producto/:id" element={<ProductoDetalle/>} />

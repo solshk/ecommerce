@@ -1,9 +1,9 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
 import ContadorProductos from '../Contador/ContadorProductos.jsx'
-import BotonGrande from '../Botones/BotonGrande.jsx'
+// import BotonGrande from '../Botones/BotonGrande.jsx'
 import BotonFavorito from '../Botones/BotonFavorito.jsx'
-import TarjetaProductoStyle from './TarjetaProducto.module.css'
+// import TarjetaProductoStyle from './TarjetaProducto.module.css'
 import { Link } from 'react-router-dom'
 
 export default function TarjetaProducto({ id, nombre, categoria, descripcion, precio, stock, esFavorito, img }) {
@@ -17,23 +17,28 @@ export default function TarjetaProducto({ id, nombre, categoria, descripcion, pr
 
     return (
 
-        <div className={TarjetaProductoStyle.card}>
-            <Link to={`/producto/${id}`}>
-                <img src={img} alt="Imagen" className={TarjetaProductoStyle.img} />
+            <div className="card border-primary mb-3" style={{maxWidth: '20rem'}}>
 
-                <div className={TarjetaProductoStyle.tituloCard}>
-                    <h5>{nombre}</h5>
-                    <BotonFavorito esFavorito={esFavorito} />
+                    <Link to={`/producto/${id}`} >
+                        <img 
+                            src={img} alt="Imagen" 
+                            style={{height: '300px', width: '300px', objectFit: 'cover', alignSelf: 'center', padding: '1rem'}}/>
+                    </Link>
+                    
+                <div className="card-body">
+                    <h4 className="card-title" style={{color: '#5a5a5a'}}>{nombre}</h4>
+                    <small className="card-subtitle mb-2 text-muted">{categoria}</small>
+                    <p className="card-text">{descripcion}</p>
+                    <h5 style={{color: '#5a5a5a'}}>$ {precio}</h5>
+
+                    {/* <ContadorProductos id={id} stock={stock} /> */}
+
+                    <button className="btn btn-lg btn-secondary" type="button" onClick={handleAgregarCarrito} style={{width: '100%'}}>
+                        Agregar al carrito
+                    </button>
                 </div>
-            </Link>
-            <small>{categoria}</small>
-            <p>{descripcion}</p>
-            <h5>$ {precio}</h5>
 
-            <ContadorProductos id={id} stock={stock} />
-
-            <BotonGrande texto={"Agregar al carrito"} onClick={handleAgregarCarrito} />
-        </div >
+            </div>
 
     )
 }

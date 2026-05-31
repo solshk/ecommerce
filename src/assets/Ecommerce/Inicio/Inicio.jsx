@@ -1,19 +1,18 @@
 import React from 'react'
 import Productos from '../Productos/ProductosContainer.jsx'
 import FormularioContainer from '../Formularios/FormularioProductoContainer.jsx'
-import MainStyle from './Main.module.css'
 import ProductosContainer from '../Productos/ProductosContainer.jsx'
 
-export default function Main() {
+export default function Inicio() {
 
   return (
 
-    <main className={MainStyle.main}>
+    <main style={{padding: '3rem'}}>
 
-      <h1>Aca va el contenido del Ecommerce</h1>
+      <h1>Inicio</h1>
 
       <section>
-        <h2>Nuestros productos desatacados</h2>
+        <h2>Nuestros productos destacados</h2>
         <ProductosContainer />
       </section>
 
