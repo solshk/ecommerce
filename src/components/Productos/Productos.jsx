@@ -1,5 +1,5 @@
 import React from 'react'
-import TarjetaProducto from '../Compartidos/Tarjetas/TarjetaProducto.jsx'
+import TarjetaProducto from '../../components/Compartidos/Tarjetas/TarjetaProducto.jsx'
 
 export default function Productos({data}) {
     return (

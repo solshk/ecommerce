@@ -1,7 +1,6 @@
 import React from 'react'
-import Header from '../Header/Header.jsx'
-import Main from '../Inicio/Inicio.jsx'
-import Footer from '../Footer/Footer.jsx'
+import Header from './Header.jsx'
+import Footer from './Footer.jsx'
 import { Outlet } from 'react-router-dom';
 
 import LayoutStyle from './layout.module.css'

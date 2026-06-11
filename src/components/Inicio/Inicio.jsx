@@ -1,6 +1,6 @@
 import React from 'react'
 import Productos from '../Productos/ProductosContainer.jsx'
-import FormularioContainer from '../Formularios/FormularioProductoContainer.jsx'
+import FormularioContainer from '../../components/Formularios/FormularioProductoContainer.jsx'
 import ProductosContainer from '../Productos/ProductosContainer.jsx'
 
 export default function Inicio() {

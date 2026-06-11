@@ -1,5 +1,5 @@
 import React from 'react'
-import Nosotros from '../Nosotros/NosotrosContainer.jsx'
+import Nosotros from '../../components/Nosotros/NosotrosContainer.jsx'
 
 export default function Footer() {
 

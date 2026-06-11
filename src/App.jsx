@@ -1,10 +1,10 @@
 import { Routes, Route } from 'react-router-dom';
-import LayoutEcommerce from './assets/Ecommerce/Layout/Layout.jsx'
-import Inicio from './assets/Ecommerce/Inicio/Inicio.jsx'
-import ProductosContainer from './assets/Ecommerce/Productos/ProductosContainer.jsx'
-import ProductoDetalle from './assets/Ecommerce/ProductoDetalle/ProductoDetalle.jsx'
-import FormularioProductoContainer from './assets/Ecommerce/Formularios/FormularioProductoContainer.jsx'
-import CarritoContainer from './assets/Ecommerce/Carrito/CarritoContainer.jsx'
+import LayoutEcommerce from './components/Layout/Layout.jsx'
+import Inicio from './components/Inicio/Inicio.jsx'
+import ProductosContainer from './components/Productos/ProductosContainer.jsx'
+import ProductoDetalle from './components/Productos/ProductoDetalle.jsx'
+import FormularioProductoContainer from './components/Formularios/FormularioProductoContainer.jsx'
+import CarritoContainer from './components/Carrito/CarritoContainer.jsx'
 import './App.css'
 
 function App() {
