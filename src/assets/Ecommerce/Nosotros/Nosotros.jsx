@@ -1,6 +1,5 @@
 import React from 'react'
 import TarjetaEquipo from '../Compartidos/Tarjetas/TarjetaEquipo.jsx'
-import NosotrosStyle from './Nosotros.module.css'
 
 export default function Nosotros({data}) {
     //DUMB
@@ -8,9 +7,9 @@ export default function Nosotros({data}) {
 
     return (
         <div>
-            <h4 className={NosotrosStyle.titulo}>Nuestro equipo</h4>
+            <h4 style={{textAlign:'center', padding: '1rem', marginTop: '2rem'}}>Nuestro equipo</h4>
 
-            <div className={NosotrosStyle.contenedorCards}>
+            <div style={{display: 'flex', flexDirection: 'row', justifyContent:'space-around', flexWrap: 'wrap'}}>
                 {data.map((empleado, id) => (
                     <TarjetaEquipo key={empleado.id} {...empleado} />
                 ))}

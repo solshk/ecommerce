@@ -1,10 +1,9 @@
 import React from 'react'
-import ProductosStyle from './Productos.module.css'
 import TarjetaProducto from '../Compartidos/Tarjetas/TarjetaProducto.jsx'
 
 export default function Productos({data}) {
     return (
-        <div className={ProductosStyle.contenedorCards}>
+        <div style={{display: 'flex', flexDirection: 'row', justifyContent:'space-around', flexWrap: 'wrap',padding: '3rem'}}>
             {data.map((producto, id) => (
                 <TarjetaProducto key={producto.id} {...producto} />
             ))}

@@ -1,9 +1,7 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
 import ContadorProductos from '../Contador/ContadorProductos.jsx'
-// import BotonGrande from '../Botones/BotonGrande.jsx'
 import BotonFavorito from '../Botones/BotonFavorito.jsx'
-// import TarjetaProductoStyle from './TarjetaProducto.module.css'
 import { Link } from 'react-router-dom'
 
 export default function TarjetaProducto({ id, nombre, categoria, descripcion, precio, stock, esFavorito, img }) {

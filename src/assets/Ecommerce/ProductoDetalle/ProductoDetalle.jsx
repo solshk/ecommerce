@@ -1,6 +1,5 @@
 import { useParams } from 'react-router-dom';
 import { useState, useEffect } from 'react';
-import DetalleStyle from './ProductoDetalle.module.css'
 
 export default function ProductoDetalle() {
 
@@ -30,11 +29,12 @@ export default function ProductoDetalle() {
     }
 
     return (
-        <div className={DetalleStyle.contenedor}>
+        <div style={{margin: 'auto', padding: '5rem 10rem', display: 'flex', flexDirection: 'row', padding: '3rem'}}>
 
-            <img src={producto.img} alt={producto.nombre} className={DetalleStyle.img} />
+            <img src={producto.img} alt={producto.nombre} 
+            style={{height: 'auto', maxWidth: '300px', borderRadius: '5px', paddingRight: '3rem'}}/>
 
-            <div className={DetalleStyle.info}>
+            <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'space-between'}}>
                 <div>
                     <h2>{producto.nombre}</h2>
                     <p style={{ fontStyle: 'italic', paddingBottom: '1rem'}}>{producto.categoria}</p>
@@ -42,7 +42,7 @@ export default function ProductoDetalle() {
                 </div>
 
                 <div>
-                    <h4 className={DetalleStyle.precio}>${producto.precio}</h4>
+                    <h4>${producto.precio}</h4>
                     <button className="btn btn-lg btn-secondary" type="button" style={{width: '100%'}}>
                         Agregar al carrito
                     </button>

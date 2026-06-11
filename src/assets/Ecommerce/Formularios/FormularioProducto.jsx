@@ -1,5 +1,4 @@
 import React from 'react'
-// import FormularioStyle from './FormularioProducto.module.css'
 import BotonSecundario from '../Compartidos/Botones/BotonSecundario.jsx'
 
 export default function FormularioProducto({ datosForm, manejarCambio, manejarEnvio, manejarCambioImg }) {

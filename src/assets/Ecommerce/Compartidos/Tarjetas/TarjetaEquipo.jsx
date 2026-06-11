@@ -1,16 +1,15 @@
 import React from 'react'
-import TarjetaEquipoStyle from './TarjetaEquipo.module.css'
 
 export default function TarjetaEquipo({ id, nombre, email, puesto, img }) {
 
     return (
-        <div className={TarjetaEquipoStyle.card}>
+        <div className="card bg-light mb-3" style={{width: '12rem'}}>
 
-            <img src={img} alt="Imagen" className={TarjetaEquipoStyle.img} />
+            <img src={img} alt="Imagen" className="card-header" />
 
-            <div className={TarjetaEquipoStyle.texto}>
-                <h5>{nombre}</h5>
-                <div>
+            <div className="card-body">
+                <h5 className='card-title'>{nombre}</h5>
+                <div className='card-text'>
                     <p style={{ fontStyle: 'italic' }}>{puesto}</p>
                     <p><small>{email}</small></p>
                 </div>
