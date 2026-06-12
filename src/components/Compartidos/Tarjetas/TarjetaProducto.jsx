@@ -3,40 +3,50 @@ import { useState, useEffect } from 'react'
 import ContadorProductos from '../Contador/ContadorProductos.jsx'
 import BotonFavorito from '../Botones/BotonFavorito.jsx'
 import { Link } from 'react-router-dom'
+import { useCart } from '../../../context/CarritoContext.jsx';
 
 export default function TarjetaProducto({ id, nombre, categoria, descripcion, precio, stock, esFavorito, img }) {
 
     // console.log (nombre, categoria, descripcion, precio)
 
+    const { addToCart } = useCart(); // Traemos la función del contexto de Carrito
+
+    // Creamos el objeto producto a partir de las props
+    const producto = { id, nombre, precio, stock, img };
+
+    // const [cantidad, setCantidad] = useState(0);
+
     const handleAgregarCarrito = () => {
-        //faltaría que agregue al carrito oficialmente
-        alert(`Agregaste ${nombre} al carrito!`);
-    }
+        addToCart(producto, 1);
+        alert(`Agregaste 1 unidad de ${nombre} al carrito.`);
+    };
+
 
     return (
 
-            <div className="card border-primary mb-3" style={{maxWidth: '20rem'}}>
+        <div className="card border-primary mb-3" style={{ maxWidth: '20rem' }}>
 
-                    <Link to={`/producto/${id}`} >
-                        <img 
-                            src={img} alt="Imagen" 
-                            style={{height: '300px', width: '300px', objectFit: 'cover', alignSelf: 'center', padding: '1rem'}}/>
-                    </Link>
-                    
-                <div className="card-body">
-                    <h4 className="card-title" style={{color: '#5a5a5a'}}>{nombre}</h4>
-                    <small className="card-subtitle mb-2 text-muted">{categoria}</small>
-                    <p className="card-text">{descripcion}</p>
-                    <h5 style={{color: '#5a5a5a'}}>$ {precio}</h5>
+            <Link to={`/producto/${id}`} >
+                <img
+                    src={img} alt="Imagen"
+                    style={{ height: '300px', width: '300px', objectFit: 'cover', alignSelf: 'center', padding: '1rem' }} />
+            </Link>
 
-                    {/* <ContadorProductos id={id} stock={stock} /> */}
+            <div className="card-body">
+                <h4 className="card-title" style={{ color: '#5a5a5a' }}>{nombre}</h4>
+                <small className="card-subtitle mb-2 text-muted">{categoria}</small>
+                <p className="card-text">{descripcion}</p>
+                <p>Stock disponible: {stock}</p>
+                <h5 style={{ color: '#5a5a5a' }}>$ {precio}</h5>
 
-                    <button className="btn btn-lg btn-secondary" type="button" onClick={handleAgregarCarrito} style={{width: '100%'}}>
-                        Agregar al carrito
-                    </button>
-                </div>
+                {/* <ContadorProductos id={id} stock={stock} /> */}
 
+                <button className="btn btn-lg btn-secondary" type="button" onClick={handleAgregarCarrito} style={{ width: '100%' }}>
+                    Agregar al carrito
+                </button>
             </div>
+
+        </div>
 
     )
 }
