@@ -1,5 +1,7 @@
 import { useParams } from 'react-router-dom';
 import { useState, useEffect } from 'react';
+import { useCart } from '../../context/CarritoContext.jsx';
+
 
 export default function ProductoDetalle() {
 
@@ -9,6 +11,12 @@ export default function ProductoDetalle() {
     // directamente en una variable, haciendo el código más limpio y directo
 
     const [producto, setProducto] = useState(null);
+
+    const { addToCart } = useCart(); 
+    const handleAgregarCarrito = () => {
+        addToCart(producto, 1);
+        alert(`Agregaste 1 unidad de ${producto.nombre} al carrito.`);
+    };
 
     useEffect(() => {
         fetch('/data/productos.json')
@@ -43,7 +51,7 @@ export default function ProductoDetalle() {
 
                 <div>
                     <h4>${producto.precio}</h4>
-                    <button className="btn btn-lg btn-secondary" type="button" style={{width: '100%'}}>
+                    <button className="btn btn-lg btn-secondary" onClick={handleAgregarCarrito} type="button" style={{width: '100%'}}>
                         Agregar al carrito
                     </button>
                 </div>

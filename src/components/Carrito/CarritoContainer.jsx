@@ -54,7 +54,7 @@ export default function CarritoContainer() {
         </tbody>
       </table>
 
-      <div style={{ display: 'flex', flexDirection: 'column', width: '300px', gap: '1rem', margin:'auto'}}>
+      <div style={{ display: 'flex', flexDirection: 'column', width: '600px', gap: '1rem', margin:'auto'}}>
         
         <h3 style={{ textAlign: 'center' }}>Total a pagar: ${getCartTotal()}</h3>
         <button className="btn btn-lg btn-primary" type="button">Finalizar Compra</button>

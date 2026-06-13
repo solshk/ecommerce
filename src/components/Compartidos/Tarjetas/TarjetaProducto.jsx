@@ -28,8 +28,7 @@ export default function TarjetaProducto({ id, nombre, categoria, descripcion, pr
 
             <Link to={`/producto/${id}`} >
                 <img
-                    src={img} alt="Imagen"
-                    style={{ height: '300px', width: '300px', objectFit: 'cover', alignSelf: 'center', padding: '1rem' }} />
+                    src={img} alt="Imagen" style={{ width: '100%', height: '300px', objectFit: 'cover', padding: '1rem' }} />
             </Link>
 
             <div className="card-body">
