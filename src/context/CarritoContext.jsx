@@ -80,9 +80,22 @@ export const CarritoProvider = ({ children }) => {
         alert("Se ha quitado 1 item del carrito");
     };
 
+     const removeAllFromCart = (id) => {
+        alert(`Esta seguro de borrar el item ${id} del carrito?`); //debería poner aceptar o cancelar y ahi ver si borra o no
+        setCart(cart =>
+            cart
+                .map(item =>
+                    item.id === id
+                        ? { ...item, quantity: 0 }
+                        : item
+                )
+                .filter(item => item.quantity > 0)
+        );
+    };
+
 
     return (
-        <CarritoContext.Provider value={{ cart, addToCart, clearCart, getCartQuantity, getCartTotal, getCantidadActual, removeOneFromCart }}>
+        <CarritoContext.Provider value={{ cart, addToCart, clearCart, getCartQuantity, getCartTotal, getCantidadActual, removeOneFromCart, removeAllFromCart }}>
             {children}
         </CarritoContext.Provider>
     );

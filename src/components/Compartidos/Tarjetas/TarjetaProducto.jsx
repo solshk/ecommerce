@@ -17,8 +17,6 @@ export default function TarjetaProducto({ id, nombre, categoria, descripcion, pr
 
     const handleAgregarCarrito = () => {
         addToCart(producto, 1);
-                console.log('addToCart', producto.id);
-
     };
 
 
