@@ -1,6 +1,5 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
-import ContadorProductos from '../Contador/ContadorProductos.jsx'
 import BotonFavorito from '../Botones/BotonFavorito.jsx'
 import { Link } from 'react-router-dom'
 import { useCart } from '../../../context/CarritoContext.jsx';
@@ -14,11 +13,12 @@ export default function TarjetaProducto({ id, nombre, categoria, descripcion, pr
     // Creamos el objeto producto a partir de las props
     const producto = { id, nombre, precio, stock, img };
 
-    // const [cantidad, setCantidad] = useState(0);
+    const { cart } = useCart();
 
     const handleAgregarCarrito = () => {
         addToCart(producto, 1);
-        alert(`Agregaste 1 unidad de ${nombre} al carrito.`);
+                console.log('addToCart', producto.id);
+
     };
 
 
@@ -37,8 +37,6 @@ export default function TarjetaProducto({ id, nombre, categoria, descripcion, pr
                 <p className="card-text">{descripcion}</p>
                 <p>Stock disponible: {stock}</p>
                 <h5 style={{ color: '#5a5a5a' }}>$ {precio}</h5>
-
-                {/* <ContadorProductos id={id} stock={stock} /> */}
 
                 <button className="btn btn-lg btn-secondary" type="button" onClick={handleAgregarCarrito} style={{ width: '100%' }}>
                     Agregar al carrito

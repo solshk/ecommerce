@@ -2,10 +2,9 @@ import React from 'react'
 import { useState, useContext, createContext } from 'react'
 import { useCart } from '../../context/CarritoContext.jsx';
 
-
 export default function CarritoContainer() {
 
-  const { cart, clearCart, getCartTotal } = useCart(); //traigo las funciones del contexto de carrito que necesito
+  const { cart, clearCart, getCartTotal, addToCart, removeOneFromCart } = useCart(); //traigo las funciones del contexto de carrito que necesito
 
   // Si el carrito está vacío, mostramos un mensaje
   if (cart.length === 0) {
@@ -17,6 +16,18 @@ export default function CarritoContainer() {
     );
   }
 
+  const handleAgregarProducto = (item) => {
+    if (item.quantity < item.stock) {
+      addToCart(item, 1);
+    } else {
+      alert("Has alcanzado el límite de stock disponible");
+    }
+  };
+
+  const handleQuitarProducto = (id) => {
+  removeOneFromCart(id);    
+};
+
 
   return (
     <div style={{ padding: '3rem' }}>
@@ -27,7 +38,7 @@ export default function CarritoContainer() {
       </div>
 
 
-      <table className="table table-hover" style={{margin:'2rem auto'}}>
+      <table className="table table-hover" style={{ margin: '2rem auto' }}>
         <thead>
           <tr>
             <th scope="col">Producto</th>
@@ -45,7 +56,15 @@ export default function CarritoContainer() {
                 <img src={item.img} alt={item.nombre} style={{ width: '3rem', height: '3rem', objectFit: 'cover', marginRight: '2rem' }} />
                 <span>{item.nombre}</span>
               </td>
-              <td>{item.quantity}</td>
+              <td>
+                <div className="btn-group" role="group">
+                  <div className="input-group mb-3">
+                    <button className="btn btn-primary" type="button" onClick={() => handleQuitarProducto(item.id)}>-</button>
+                    <p style={{ width: '30px', textAlign: 'center' }}>{item.quantity}</p>
+                    <button className="btn btn-primary" type="button" onClick={() => handleAgregarProducto(item)}>+</button>
+                  </div>
+                </div>
+                {item.quantity}</td>
               <td>$ {item.precio}</td>
               <td>$ {item.precio * item.quantity}</td>
             </tr>
@@ -54,8 +73,8 @@ export default function CarritoContainer() {
         </tbody>
       </table>
 
-      <div style={{ display: 'flex', flexDirection: 'column', width: '600px', gap: '1rem', margin:'auto'}}>
-        
+      <div style={{ display: 'flex', flexDirection: 'column', width: '600px', gap: '1rem', margin: 'auto' }}>
+
         <h3 style={{ textAlign: 'center' }}>Total a pagar: ${getCartTotal()}</h3>
         <button className="btn btn-lg btn-primary" type="button">Finalizar Compra</button>
 

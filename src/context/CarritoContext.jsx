@@ -19,20 +19,39 @@ export const CarritoProvider = ({ children }) => {
 
     const [cart, setCart] = useState([]); //inicializamos el estado del carrito
 
-    // Funciones del carrito aquí...
-    
+    // todas las funciones del carrito van aca:
+
     const addToCart = (product, quantity) => {
+
+        //  console.log('addToCart', product.id);
+
         const itemInCart = cart.find(item => item.id === product.id);
+
         if (itemInCart) {
-            const updatedCart = cart.map(item =>
-                item.id === product.id
-                    ? { ...item, quantity: item.quantity + quantity }
-                    : item
+            const nuevaCantidad = itemInCart.quantity + quantity;
+            if (nuevaCantidad > product.stock) {
+                alert(`No hay más stock disponible del producto ${product.nombre}`);
+                return;
+            }
+
+            setCart(
+                cart.map(item =>
+                    item.id === product.id
+                        ? { ...item, quantity: nuevaCantidad }
+                        : item
+                )
             );
-            setCart(updatedCart);
+            alert(`Cantidad del item ${product.nombre} actualizada en el carrito`);
+
         } else {
-            setCart(prevCart => [...prevCart, { ...product, quantity }]);
+            setCart([...cart, { ...product, quantity }]);
+            alert(`Item nuevo ${product.nombre}  agregado al carrito`);
         }
+    };
+
+    const getCantidadActual = (productId) => {
+        const item = cart.find(item => item.id === productId);
+        return item ? item.quantity : 0;
     };
 
     const clearCart = () => {
@@ -48,9 +67,22 @@ export const CarritoProvider = ({ children }) => {
             0);
     };
 
+    const removeOneFromCart = (id) => {
+        setCart(cart =>
+            cart
+                .map(item =>
+                    item.id === id
+                        ? { ...item, quantity: item.quantity - 1 }
+                        : item
+                )
+                .filter(item => item.quantity > 0)
+        );
+        alert("Se ha quitado 1 item del carrito");
+    };
+
 
     return (
-        <CarritoContext.Provider value={{ cart, addToCart, clearCart, getCartQuantity, getCartTotal }}>
+        <CarritoContext.Provider value={{ cart, addToCart, clearCart, getCartQuantity, getCartTotal, getCantidadActual, removeOneFromCart }}>
             {children}
         </CarritoContext.Provider>
     );

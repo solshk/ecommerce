@@ -15,7 +15,6 @@ export default function ProductoDetalle() {
     const { addToCart } = useCart(); 
     const handleAgregarCarrito = () => {
         addToCart(producto, 1);
-        alert(`Agregaste 1 unidad de ${producto.nombre} al carrito.`);
     };
 
     useEffect(() => {
@@ -37,7 +36,7 @@ export default function ProductoDetalle() {
     }
 
     return (
-        <div style={{margin: 'auto', padding: '5rem 10rem', display: 'flex', flexDirection: 'row', padding: '3rem'}}>
+        <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '3rem',  padding: '3rem'}}>
 
             <img src={producto.img} alt={producto.nombre} 
             style={{height: 'auto', maxWidth: '300px', borderRadius: '5px', paddingRight: '3rem'}}/>
